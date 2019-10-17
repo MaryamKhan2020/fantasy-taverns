@@ -1,5 +1,6 @@
-<h2>Login</h2>
-<form>
+ 
+<h2>Sign Up!</h2>
+<form #SignupForm='ngForm' (ngSubmit)=signup(SignupForm)>
   <div class="row">
     <div class="col-md-6">
       <label>User Name</label>
@@ -12,12 +13,12 @@
   <br />
   <div class="row">
     <div class="col-md-6">
-      <button type="submit" class="btn btn-primary" (click)="login()">
-        Submit
-      </button>
-      <button class="btn btn-primary" *ngIf="!LoggedIn" routerLink="/signup">
-        Signup
-      </button>
+        <button type="submit" class="btn btn-primary" *ngIf="!LoggedIn">  
+            Signup
+        </button>
+        <button class="btn btn-primary" routerLink="/login">
+            Cancel
+        </button>
     </div>
   </div>
 </form>
